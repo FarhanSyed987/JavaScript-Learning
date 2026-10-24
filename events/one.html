@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141;color: aliceblue;">
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="ronaldo" src="https://i.pinimg.com/736x/07/fa/1f/07fa1fb783a23ee2b9d3d8a96a348711.jpg" alt="photoshop"></li>
+            <li><img width="200px" id="dicaprio" src="https://i.pinimg.com/736x/df/97/7c/df977c8a732e46d7ea7ca484427977f5.jpg" alt=""></li>
+            <li><img width="200px" id="spiderman" src="https://i.pinimg.com/736x/48/ce/e5/48cee53203651dae8f3229fd4739c3f8.jpg" alt=""></li>
+            <li><img width="200px" id="cat" src="https://i.pinimg.com/1200x/af/91/1b/af911b8119ee0cc0d44c031be361a802.jpg" alt=""></li>
+            <li><img width="200px" id="bale" src="https://i.pinimg.com/736x/c4/3c/ba/c43cba7c20d73e9f3be16d0cf27d7c55.jpg" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("cat").onclick=function(){
+    //     alert("owl clicked");
+    // }
+
+    // document.getElementById("cat").addEventListener("click",function(e){
+    //     // alert("cat clicked again");
+    //     console.log(e);
+    // },false)
+
+    // document.getElementById("images").addEventListener("click",function(e){
+    //     console.log("clicked inside ul");
+    // },false)
+
+
+    // document.getElementById("cat").addEventListener("click",function(e){
+    //     console.log("cat clicked");
+    //     e.stopPropagation();
+    // },false)
+
+    document.getElementById("google").addEventListener("click",function(e){
+        e.preventDefault();
+        e.stopPropagation()
+        console.log("Google is running");
+    },false)
+
+    document.querySelector("#images").addEventListener("click",function(e){
+        console.log(e.target.parentNode);
+        if (e.target.tagName==="IMG"){
+            console.log(e.target.tagName);
+            let removeIt=e.target.parentNode;
+            removeIt.remove();
+            // removeIt.parentNode.removeChild(removeIt); //oldway
+        }
+        
+        
+    })
+
+</script>
+</html>
