@@ -24,4 +24,3 @@ buttons.forEach(function(button){
 
     })
 })
-

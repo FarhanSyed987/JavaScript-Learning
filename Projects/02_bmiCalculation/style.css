@@ -44,3 +44,8 @@ h1 {
   padding-top: 25px;
   
 }
+
+#normalweight,#underweight,#overweight{
+  width: 200px;
+  height: 20px;
+}

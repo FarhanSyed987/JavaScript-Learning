@@ -15,19 +15,22 @@ form.addEventListener("submit",function(e){
         results.innerHTML=`<span>${bmi}</span>`;
 
         if (bmi<18.6){
-            document.querySelector("#underweight").style.color="green";
-            document.querySelector("#underweight").style.padding="12px";
-            document.querySelector("#underweight").style.backgroundColor="white";
+            const underweight=document.querySelector("#underweight")
+            underweight.style.color="green";
+            underweight.style.padding="12px"
+            underweight.style.backgroundColor="white"
         }
         else if (bmi>18.6 && bmi<24.9){
-            document.querySelector("#normalweight").style.color="green";
-            document.querySelector("#normalweight").style.padding="12px";
-            document.querySelector("#normalweight").style.backgroundColor="white";
+            const normalweight=document.querySelector("#normalweight")
+            normalweight.style.color="green";
+            normalweight.style.padding="12px"
+            normalweight.style.backgroundColor="white"
         }
         else{
-            document.querySelector("#overweight").style.color="green";
-            document.querySelector("#overweight").style.padding="12px";
-            document.querySelector("#overweight").style.backgroundColor="white";
+            const overweight=document.querySelector("#overweight")
+            overweight.style.color="green";
+            overweight.style.padding="12px"
+            overweight.style.backgroundColor="white"
         }
     }
 })
